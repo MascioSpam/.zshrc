@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls='ls --color=auto'
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 alias pinga="ping duckduckgo.com"
-alias aggiorna="packer -Syu"
+alias aggiorna="apacman -Syu"
 export ANDROID_HOME="/home/masciospam/Android/Sdk"
 export JAVA8_HOME="usr/lib/jvm/java-8-openjdk/"
 
