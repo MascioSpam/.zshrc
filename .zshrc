@@ -84,7 +84,16 @@ alias ls='ls --color=auto'
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 alias pinga="ping duckduckgo.com"
 alias aggiorna="apacman -Syu"
-alias orphans="pacman -Qqdt"
+
+orphans() {
+  if [[ ! -n $(pacman -Qdt) ]]; then
+    echo no orphans to remove
+  else
+    sudo pacman -Rs $(pacman -Qdtq)
+  fi
+}
+
+
 export ANDROID_HOME="/home/masciospam/Android/Sdk"
 export JAVA8_HOME="usr/lib/jvm/java-8-openjdk/"
 
