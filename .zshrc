@@ -93,6 +93,14 @@ orphans() {
   fi
 }
 
+list_packages() {
+  printf "\n[Native packages]\n"
+  pacman -Qent
+
+  printf "\n[Manual installed packages]\n"
+  pacman -Qm
+}
+
 
 export ANDROID_HOME="/home/masciospam/Android/Sdk"
 export JAVA8_HOME="usr/lib/jvm/java-8-openjdk/"
