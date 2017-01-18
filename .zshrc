@@ -93,6 +93,12 @@ orphans() {
   fi
 }
 
+share() {
+  printf "\nLive-server enabled, connect to:\n"
+  hostname -i
+  live-server -q --no-browser
+}
+
 list_packages() {
   printf "\n[Native packages]\n"
   pacman -Qent
